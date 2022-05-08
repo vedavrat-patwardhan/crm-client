@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+@import "templates";
+@import "components";
+@import "pages";
+@import "pagination";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+a {
+  text-decoration: none;
+  font-family: Poppins;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: Poppins;
+}
+
+input {
+  outline: none;
+  background: transparent;
+  text-decoration: none;
+  font-family: Poppins;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.app-card {
+  @extend .dfc-ac-jc;
+  @include cardMixin(#fff);
+  padding: 4rem 0;
+  min-width: 32rem;
+  a {
+    width: 15rem;
+  }
+}
+
+.btn--disabled {
+  opacity: 0.6;
+  cursor: auto;
+  pointer-events: none;
+}
+.display-none {
+  display: none;
+}
+.hr {
+  border: none;
+  height: 1px;
+  background-color: rgb(179, 228, 241);
+  margin: 0;
+}
+input[type="checkbox"] {
+  width: 1.125rem;
+  height: 1.125rem;
+  &:hover {
+    cursor: pointer;
+  }
+}

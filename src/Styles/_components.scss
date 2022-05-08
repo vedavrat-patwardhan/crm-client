@@ -1,0 +1,399 @@
+//------------------------------------------------- Form styles -------------------------------------------//
+
+.form-btn {
+  background: $primary-color;
+  padding: 0.75rem;
+  color: #fefefe;
+  font-size: 0.875rem;
+  font-weight: 400;
+  border-radius: 0.5rem;
+  text-align: center;
+  &:hover {
+    background: $primary-hover;
+    color: #fefefe;
+  }
+}
+input.form-control {
+  padding: 0.469rem 0.75rem;
+}
+.btn {
+  padding: 0.469rem 0.75rem;
+}
+.form-input {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #007fff;
+  box-sizing: border-box;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  outline: none;
+}
+.error-border {
+  border: 1px solid $error-color !important;
+}
+.error-field {
+  @extend .m-l-8;
+  color: $error-color;
+  font-size: 0.75rem;
+}
+.password {
+  @extend .df-ac-jc;
+  justify-content: space-between;
+  background: #ffffff;
+  box-sizing: border-box;
+  border: 1px solid #007fff;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+.password-input {
+  width: 93%;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.date-picker {
+  div {
+    border: none;
+  }
+}
+
+.go-back {
+  position: absolute;
+  top: 3.25rem;
+  left: 3.25rem;
+  line-height: 1.25rem;
+  &__btn {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: $primary-color;
+  }
+}
+
+// --------------------------------Hamburger------------------
+
+.hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  .hamburger-menu {
+    display: flex;
+    height: 100vh;
+    width: 19.25rem;
+    flex-direction: column;
+    background-color: $primary-grey;
+    position: fixed;
+    left: -20rem;
+    transition: 500ms;
+    z-index: 5;
+  }
+  .hamburger-menu--open {
+    left: 0;
+    transition: 500ms;
+  }
+  svg {
+    font-size: 2.5rem;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    &:hover {
+      cursor: pointer;
+      background-color: $primary-hover;
+      color: #fff;
+      border-radius: 50%;
+    }
+  }
+  a {
+    @include optionWithHover(0 1.25rem, 1rem, 1rem);
+  }
+  .active {
+    margin: 0 1.25rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: #fff;
+    background-color: $primary-color;
+  }
+}
+
+// -------------------------------- Searchable-Input ------------------
+
+.search-div {
+  @include componentMixin(#fff, 0 0.5rem);
+  @extend .m-r-16;
+  .search__input {
+    font-size: 1rem;
+    border: none;
+    padding: 0.75rem;
+    color: #000;
+    width: 100%;
+  }
+  .search__icon {
+    color: #99b2c6;
+  }
+}
+
+// -------------------------------- Dropdown ------------------
+
+.dropdown {
+  .dropdown-btn {
+    @include componentMixin($primary-grey, 0.625rem 0.5rem);
+    width: 8rem;
+    svg {
+      color: #99b2c6;
+    }
+  }
+  .dropdown-box {
+    @include componentMixin($primary-grey, 0 0);
+    @extend .dfc-as;
+    position: absolute;
+    width: 7.75rem;
+    .dropdown-box__content {
+      @include optionWithHover(0.25rem, 1rem, 0.5rem);
+      place-self: stretch;
+    }
+  }
+}
+
+//------------------------------------------------table-------------------------------------------
+
+.table-box {
+  width: 100%;
+
+  .table-box__header {
+    height: 2.5rem;
+    color: $sub-heading-color;
+    .table-box__header-row {
+      .table-box__heading {
+        padding: 1rem;
+        text-align: left;
+        vertical-align: top;
+      }
+    }
+  }
+  .table-box__body {
+    .table-box__body-row {
+      line-height: 1.5rem;
+      .table-box__cell {
+        padding: 1rem;
+      }
+    }
+  }
+}
+
+.btn-page {
+  margin: 0.5rem;
+  padding: 1rem;
+  font-size: 0.9rem;
+  border-radius: 50%;
+  color: $sub-heading-color;
+  background-color: $primary-grey;
+  border: 1px solid $sub-heading-color;
+  &:hover {
+    cursor: pointer;
+    background-color: $primary-hover;
+    color: #fff;
+  }
+}
+
+// -------------------------------- Popup ------------------
+
+.popup {
+  @extend .df-ac-jc;
+  position: fixed;
+  background: rgba($color: #000000, $alpha: 0.4);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  .popup__window {
+    @include cardMixin(#fff);
+    @extend .dfc;
+  }
+}
+
+// -------------------------------- Dashboard-Form ------------------
+
+.dashboard-form {
+  @extend .df-as-jsb, .wd-100p, .p-a-14;
+  // gap: 6rem;
+  .dashboard-form__col-1,
+  .dashboard-form__col-2 {
+    @extend .dfc;
+    width: 32rem;
+    > div,
+    strong {
+      margin-bottom: 1rem;
+    }
+    .search-input {
+      input {
+        border: none;
+        width: 100%;
+      }
+    }
+    .name-box {
+      border: 1px solid #007fff;
+      border-radius: 0.5rem;
+      width: fit-content;
+    }
+  }
+  .search-box {
+    width: 100%;
+    .rbt-close-content {
+      display: none;
+    }
+  }
+}
+
+.amc-week {
+  .dropdown-box__content {
+    padding: 0.25rem !important;
+  }
+}
+
+// -------------------------------- Action-Form ------------------
+
+.action-form {
+  @extend .df-as-jsb, .wd-100p, .p-a-14;
+  // gap: 6rem;
+  .action-form__col {
+    @extend .dfc;
+    width: 32rem;
+    font-size: 1.25rem;
+    strong {
+      margin-bottom: 1rem;
+    }
+    span {
+      font-weight: 500;
+    }
+  }
+  .search-box {
+    width: 80%;
+    margin-bottom: 1rem;
+    input {
+      border: 1px solid #007fff;
+      padding: 0.657rem;
+    }
+    .rbt-close-content {
+      display: none;
+    }
+  }
+}
+
+//-------------------------------------------------- Page Heading --------------------------------------------------//
+
+.page__heading {
+  @extend .df-ac-jsb;
+  .heading__text {
+    @extend .dfc-ae;
+    strong {
+      font-size: 1.75rem;
+      color: $heading-color;
+      font-weight: 500;
+    }
+    span {
+      color: $sub-heading-color;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+// -------------------------------- Loader ------------------
+
+.loader {
+  color: $primary-color;
+  font-size: 5.625rem;
+  text-indent: -9999em;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  margin: 4.5rem auto;
+  position: relative;
+  transform: translateZ(0);
+  animation: load 2s infinite ease, round 2s infinite ease;
+}
+@-webkit-keyframes load {
+  0% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em,
+      -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em,
+      -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em,
+      -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em,
+      -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em,
+      -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em,
+      -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+@keyframes load {
+  0% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em,
+      -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em,
+      -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em,
+      -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em,
+      -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em,
+      -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em,
+      -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+@-webkit-keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

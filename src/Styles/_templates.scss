@@ -1,0 +1,404 @@
+//------------------------------------------------- Variables -------------------------------------------//
+
+$box-shadow-lg: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+$primary-grey: #f1f4fa;
+$primary-bg: #fefefe;
+$primary-color: #3a36db;
+$primary-hover: #2825b1;
+$heading-color: #06152b;
+$sub-heading-color: #809fb8;
+$error-color: #fc5a5a;
+$break-point: 1120px;
+
+//------------------------------------------------- Mixins -------------------------------------------//
+
+@mixin cardMixin($card-bg) {
+  background: $card-bg;
+  border-radius: 0.5rem;
+  box-shadow: $box-shadow-lg;
+}
+
+@mixin componentMixin($bg, $padding) {
+  @extend .df-ac-jsb;
+  background: $bg;
+  border: 2px solid #d9e1e7;
+  border-radius: 0.5rem;
+  padding: $padding;
+}
+
+@mixin optionWithHover($margin, $padding, $border-r) {
+  margin: $margin;
+  padding: $padding;
+  background-color: transparent;
+  color: $sub-heading-color;
+  border-radius: $border-r;
+  &:hover {
+    color: #fff;
+    background-color: $primary-hover;
+  }
+}
+
+@mixin tables {
+}
+//------------------------------------------------- Display styles -------------------------------------------//
+
+.df-wr {
+  flex-wrap: wrap;
+}
+.df-ac {
+  display: flex;
+  align-items: center;
+}
+
+.df-as {
+  display: flex;
+  align-items: flex-start;
+}
+
+.df-ac-jc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.df-ac-jfs {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.df-ac-jsb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.df-ac-jfe {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.df-as-jsb {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.dfc {
+  display: flex;
+  flex-direction: column;
+}
+
+.dfc-ac {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dfc-as {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.dfc-ae {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.dfc-ac-jc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dfc-ac-jsb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dfc-ac-jsa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.dfc-ac-jse {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+//------------------------------------------------- Dimension styles -------------------------------------------//
+
+.ht-100vh {
+  height: 100vh !important;
+}
+.ht-70vh {
+  height: 70vh !important;
+}
+.ht-50p {
+  height: 50% !important;
+}
+.wd-100vw {
+  width: 100vw !important;
+}
+.wd-100p {
+  width: 100% !important;
+}
+
+.wd-70p {
+  width: 70% !important;
+}
+.wd-50p {
+  width: 50% !important;
+}
+.wd-30p {
+  width: 30% !important;
+}
+
+.wd-30r {
+  width: 30rem !important;
+}
+.wd-20r {
+  width: 20rem !important;
+}
+.wd-3-5r {
+  width: 3.5rem !important;
+}
+.wd-3-75r {
+  width: 3.75rem !important;
+}
+.min-wd-75r {
+  min-width: 75rem !important;
+}
+.min-wd-65r {
+  min-width: 65rem !important;
+}
+.min-wd-40r {
+  min-width: 40rem !important;
+}
+.min-wd-25r {
+  min-width: 25rem !important;
+}
+
+.max-wd-26r {
+  max-width: 26rem !important;
+}
+
+.wd-min-cont {
+  width: min-content;
+}
+//------------------------------------------------- Colors -------------------------------------------//
+
+.color-primary-grey {
+  color: $primary-grey !important;
+}
+.color-primary-bg {
+  color: $primary-bg !important;
+}
+.color-primary {
+  color: $primary-color;
+  &:hover {
+    color: $primary-hover;
+  }
+}
+
+.bgc-primary {
+  background-color: $primary-bg;
+}
+
+.on-hover-black {
+  &:hover {
+    color: #000;
+  }
+}
+.hover-btn {
+  &:hover {
+    color: $primary-bg;
+    background: $primary-color;
+  }
+}
+
+//------------------------------------------------- Margins -------------------------------------------//
+
+.m-t-4 {
+  margin-top: 0.25rem !important;
+}
+.m-t-8 {
+  margin-top: 0.5rem !important;
+}
+.m-t-12 {
+  margin-top: 0.75rem !important;
+}
+.m-t-16 {
+  margin-top: 1rem !important;
+}
+.m-t-20 {
+  margin-top: 1.25rem !important;
+}
+.m-t-24 {
+  margin-top: 1.5rem !important;
+}
+.m-t-28 {
+  margin-top: 1.75rem !important;
+}
+.m-t-32 {
+  margin-top: 2rem !important;
+}
+.m-r-4 {
+  margin-right: 0.25rem !important;
+}
+.m-r-8 {
+  margin-right: 0.5rem !important;
+}
+.m-r-12 {
+  margin-right: 0.75rem !important;
+}
+.m-r-16 {
+  margin-right: 1rem !important;
+}
+.m-r-20 {
+  margin-right: 1.25rem !important;
+}
+.m-r-24 {
+  margin-right: 1.5rem !important;
+}
+.m-r-28 {
+  margin-right: 1.75rem !important;
+}
+.m-r-32 {
+  margin-right: 2rem !important;
+}
+.m-b-4 {
+  margin-bottom: 0.25rem !important;
+}
+.m-b-8 {
+  margin-bottom: 0.5rem !important;
+}
+.m-b-12 {
+  margin-bottom: 0.75rem !important;
+}
+.m-b-16 {
+  margin-bottom: 1rem !important;
+}
+.m-b-20 {
+  margin-bottom: 1.25rem !important;
+}
+.m-b-24 {
+  margin-bottom: 1.5rem !important;
+}
+.m-b-28 {
+  margin-bottom: 1.75rem !important;
+}
+.m-b-32 {
+  margin-bottom: 2rem !important;
+}
+.m-l-4 {
+  margin-left: 0.25rem !important;
+}
+.m-l-8 {
+  margin-left: 0.5rem !important;
+}
+.m-l-12 {
+  margin-left: 0.75rem !important;
+}
+.m-l-16 {
+  margin-left: 1rem !important;
+}
+.m-l-20 {
+  margin-left: 1.25rem !important;
+}
+.m-l-24 {
+  margin-left: 1.5rem !important;
+}
+.m-l-28 {
+  margin-left: 1.75rem !important;
+}
+.m-l-32 {
+  margin-left: 2rem !important;
+}
+
+//------------------------------------------------- Padding -------------------------------------------//
+
+.p-a-4 {
+  padding: 0.25rem !important;
+}
+.p-a-14 {
+  padding: 0.875rem !important;
+}
+.p-a-24 {
+  padding: 1.5rem !important;
+}
+.p-t-24 {
+  padding-top: 1.5rem !important;
+}
+.p-t-12 {
+  padding-top: 0.75rem !important;
+}
+.p-b-12 {
+  padding-bottom: 0.75rem !important;
+}
+.p-tb-12 {
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+}
+.p-lr-12 {
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+}
+.p-lr-24 {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+// ------------------------------------------------ Font Styles --------------------------------------------------
+.ft-sz-16 {
+  font-size: 1rem !important;
+}
+.ft-sz-20 {
+  font-size: 1.25rem !important;
+}
+.ft-sz-24 {
+  font-size: 1.5rem !important;
+}
+.ft-sz-32 {
+  font-size: 2rem !important;
+}
+.ft-sz-40 {
+  font-size: 2.5rem !important;
+}
+.ft-sz-48 {
+  font-size: 3rem !important;
+}
+.ft-sz-64 {
+  font-size: 4rem !important;
+}
+.ft-wt-500 {
+  font-weight: 500 !important;
+}
+.ft-wt-600 {
+  font-weight: 600 !important;
+}
+.ft-wt-700 {
+  font-weight: 700 !important;
+}
+.lt-sp-2 {
+  letter-spacing: 0.125rem !important;
+}
+// ------------------------------------------------ mislinious --------------------------------------------------
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.btn--disabled {
+  opacity: 0.6;
+  cursor: auto;
+  pointer-events: none;
+}
+.va-mid {
+  vertical-align: middle;
+}

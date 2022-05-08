@@ -1,0 +1,45 @@
+export const getTypesOfProblem = [
+  { name: "Quotation" },
+  { name: "Lead" },
+  { name: "Assembly & installation" },
+  { name: "Attendance Machine" },
+  { name: "Booting" },
+  { name: "CCTV" },
+  { name: "Collection" },
+  { name: "Delivery" },
+  { name: "Demo / Training" },
+  { name: "Display / Monitor" },
+  { name: "Email / Internet" },
+  { name: "Network" },
+  { name: "Laptop" },
+  { name: "MODEM / Router / Wifi" },
+  { name: "Other" },
+  { name: "PC Repair" },
+  { name: "Preventive Maintenance" },
+  { name: "Printer / Scanner" },
+  { name: "Server" },
+  { name: "Software" },
+  { name: "Tally / Busy" },
+  { name: "Toners" },
+  { name: "UPS" },
+  { name: "Virus" },
+];
+
+export const getDescriptions = [
+  { name: "Collect" },
+  { name: "Repair" },
+  { name: "Forward" },
+  { name: "Refilling" },
+  { name: "Installation" },
+  { name: "Cartridge" },
+  { name: "Deliver" },
+];
+
+export const getRemark = [
+  { name: "Collected" },
+  { name: "Repaired" },
+  { name: "Forwarded" },
+  { name: "Refilled" },
+  { name: "Installed" },
+  { name: "Delivered" },
+];

@@ -1,0 +1,67 @@
+//------------------------------------------- Register -------------------------------------------//
+
+.register-page {
+  @extend .dfc-ac-jc, .ht-100vh;
+  .register-page__heading {
+    font-size: 4rem;
+    color: $heading-color;
+  }
+  .register-page__sub-heading {
+    @extend .m-t-8, .m-b-16;
+    font-size: 1.25rem;
+    color: $sub-heading-color;
+  }
+  .register-form {
+    @extend .dfc-ac-jsa;
+    @include cardMixin(#fff);
+    min-width: 25rem;
+    padding: 2.5rem;
+  }
+
+  .register-input {
+    @extend .wd-100p;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: min-content;
+    gap: 1.25rem;
+    input {
+      @extend .wd-100p;
+    }
+  }
+}
+
+//------------------------------------------- Dashboard -------------------------------------------//
+
+.dashboard {
+  background: $primary-grey;
+  padding: 1.25rem;
+  .dashboard__content {
+    border-radius: 2rem;
+    background: $primary-bg;
+    padding: 2.625rem;
+    .content__box {
+      @extend .dfc-as;
+      border-radius: 2rem;
+      padding: 1.125rem;
+      margin-top: 2.5rem;
+      border: 1px solid rgba(217, 225, 231, 0.8);
+      height: 100%;
+      .table__filter {
+        @extend .df-ac, .wd-100p;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}
+
+//------------------------------------------- Profile -------------------------------------------//
+
+.profile-page {
+  @extend .ht-100vh, .wd-100vw, .dfc-ac-jc;
+  .profile-page__card {
+    @extend .m-t-32;
+    @include cardMixin(#fff);
+    min-width: 30rem;
+    padding: 0.75rem;
+  }
+}
